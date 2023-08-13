@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" type="text/css" href="./Chatroom.css">
+    <link rel="stylesheet" type="text/css" href="./index.css">
+
+    <title>VoiceChatBot Demo</title>
+
+  </head>
+  <body>
+  <h1>SAMPLE WEBSITE PAGE...</h1>
+  <div class="chat-container"></div>
+  <p>Hindi Voice Bot:</p>
+  <p>Hosted website link:</p>
+  <p>https://ubiquitous-gingersnap-cbb1fa.netlify.app/</p>
+  <br>
+  <p>This app is tuned for a specific use case(in current scenario the use case is about the a Electricity Board Website customer helpdesk Assistant)</p>
+  <br>
+  <p>You can ask the bot with the commands like these below samples:</p>
+  <ul>
+    <li>नए बिजली का अकाउंट खुलवाना है</li>
+    <li>बिजली का नया कनेक्शन चाहिए क्या करना होगा</li>
+    <li>कौन से दस्तावेज जमा करने हैं</li>
+    <li>कौन से डॉक्यूमेंट सबमिट करने हैं</li>
+    <li>नए कनेक्शन के लिए कितनी फीस जमा करनी है</li>
+    <li>बिजली कनेक्शन का शुल्क कितना है</li>
+    <li>कनेक्शन की आखिरी तिथि बढ़ानी है</li>
+    <li>कनेक्शन खत्म हो गया है| वापस कैसे एक्टिवेट करें</li>
+  </ul>
+
+  <p>If asked other commands from the use case, it will be out of the scope:</p>
+  <ul>
+    <li>मुझे खाना ऑर्डर करना है</li>
+    <li>यूएस का प्रेसिडेंट कौन है</li>
+  </ul>
+
+    <script src="/Chatroom.js"></script>
+    <script type="text/javascript">
+      window.chatroom = new window.Chatroom({
+        title: "Voice Chat Assistance",
+        container: document.querySelector(".chat-container"),
+        welcomeMessage: "नमस्ते!",
+        host: "./serverlink",
+        speechRecognition: "hi",
+        voiceLang: "hi-IN"
+
+      });
+      window.chatroom.openChat();
+    </script>
+  </body>
+</html>
+
